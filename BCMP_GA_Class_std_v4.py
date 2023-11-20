@@ -174,7 +174,7 @@ class BCMP_GA_Class:
         L_class = np.array(theoretical) #list to numpy
         np.savetxt('./ga_L_std_'+str(self.N)+'_'+str(self.R)+'_'+str(self.K_total)+'_'+str(self.npop)+'_'+str(self.ngen)+'.csv', L_class, delimiter=',')
         np.savetxt('./ga_Node_std_'+str(self.N)+'_'+str(self.R)+'_'+str(self.K_total)+'_'+str(self.npop)+'_'+str(self.ngen)+'.csv', individual, delimiter=',')
-        #np.savetxt('./ga_P_std_'+str(self.N)+'_'+str(self.R)+'_'+str(self.K_total)+'_'+str(self.npop)+'_'+str(self.ngen)+'.csv', p, delimiter=',')
+        np.savetxt('./ga_P_std_'+str(self.N)+'_'+str(self.R)+'_'+str(self.K_total)+'_'+str(self.npop)+'_'+str(self.ngen)+'.csv', self.p, delimiter=',')
         np.savetxt('./ga_Object_std_'+str(self.N)+'_'+str(self.R)+'_'+str(self.K_total)+'_'+str(self.npop)+'_'+str(self.ngen)+'.csv', np.array(self.bestfit_seriese), delimiter=',')
         print('Final Result')
         print('L = {0}'.format(L_class))
